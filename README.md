@@ -1,4 +1,4 @@
 kumquatEdibles
 ==============
 
-Practice Repo
+Practice Repository
