@@ -1,16 +1,72 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Space
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_height="wrap_content" />
+    
+    <TableRow 
+        android:layout_weight="1" 
+        android:paddingTop="10dp">
+        
+        <Button 
+            style="@style/TextView"
+            android:id="@+id/numberMode"
+            android:onClick="handleNumberMode"
+            android:text="@string/numberMode"/>
 
-</RelativeLayout>
+        <Button
+            style="@style/TextView"
+            android:id="@+id/colorMode"
+            android:onClick="handleGameMode"
+            android:text="@string/colorMode" />
+        
+        </TableRow>
+        
+        <TableRow 
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:paddingTop="10dp">
+        
+        <Button 
+            style="@style/TextView"
+            android:id="@+id/scores"
+            android:onClick="handleScores"
+            android:text="@string/score"/>
+
+        <Button
+            style="@style/TextView"
+            android:id="@+id/tutorial"
+            android:onClick="handleTutorial"
+            android:text="@string/tutorial" />
+        
+        </TableRow>
+        
+        <TableRow 
+            android:layout_weight="1" 
+            android:gravity="bottom" 
+            android:paddingBottom="10dp">
+        
+        <Button 
+            style="@style/TextView"
+            android:id="@+id/about"
+            android:onClick="handleAbout"
+            android:text="@string/about"/>
+
+        <Button
+            style="@style/TextView"
+            android:id="@+id/exit"
+            android:onClick="handleExit"
+            android:text="@string/exit" />
+        
+        </TableRow>
+
+</TableLayout>
